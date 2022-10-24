@@ -16,7 +16,7 @@ public class TicketManager {
 
     public Ticket[] findAll(String from, String to) {
         Ticket[] result = new Ticket[0];
-        for (Ticket ticket : repo.finAll()) {
+        for (Ticket ticket : repo.findAll()) {
             if (matches(ticket, from, to)) {
                 Ticket[] tmp = new Ticket[result.length + 1];
                 for (int i = 0; i < result.length; i++) {
@@ -26,9 +26,7 @@ public class TicketManager {
                 result = tmp;
             }
         }
-        return result;
-    }
-
+        
     Arrays.sort(result);
     return result;
 

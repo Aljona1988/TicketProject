@@ -1,7 +1,7 @@
 public class TicketRepository {
     protected Ticket[] tickets = new Ticket[0];
 
-    public Ticket[] finAll() {
+    public Ticket[] findAll() {
         return tickets;
     }
 
